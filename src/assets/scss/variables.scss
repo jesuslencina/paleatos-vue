@@ -1,0 +1,12 @@
+$accent-green: #386700;
+$text-gray: #2b3948;
+$bg-gray: #f5f3ee;
+
+$desktop: 720px;
+
+@mixin bg-graphic($path) {
+    background-image: url($path);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
