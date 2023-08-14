@@ -10,3 +10,8 @@ $desktop: 720px;
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+@mixin shadow() {
+    filter: drop-shadow(5px 5px 15px #aaaaaa8f);
+    transition: all 0.2s ease-in-out;
+}

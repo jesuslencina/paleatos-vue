@@ -27,7 +27,9 @@ main {
 
 .logo {
     margin-top: 5vh;
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
+
+    animation: swing-bottom-fwd 1.25s ease-in-out 5s both;
 }
 
 h1 {
@@ -37,6 +39,8 @@ h1 {
     line-height: 2.75rem;
     text-align: center;
     margin: 0 $spacing;
+
+    animation: scale-up-center-fade 1.25s ease-in-out 1s both;
 }
 
 .line {
@@ -44,11 +48,15 @@ h1 {
     width: 80vw;
     height: 1rem;
     @include bg-graphic("../assets/images/green-line.webp");
+
+    animation: scale-up-center-fade 1.25s ease-in-out 2s both;
 }
 
 p {
     text-align: center;
     margin: 4vh $spacing 0;
+
+    animation: scale-up-center-fade 1.25s ease-in-out 2.5s both;
 }
 
 .bg-sushi-1 {
@@ -59,6 +67,9 @@ p {
     width: 30vw;
     height: 100%;
     @include bg-graphic("../assets/images/hero-left.webp");
+    @include shadow();
+
+    animation: slide-right 1.25s ease-in-out 4s both;
 }
 
 .bg-sushi-2 {
@@ -69,6 +80,9 @@ p {
     width: 30vw;
     height: 100%;
     @include bg-graphic("../assets/images/hero-right.webp");
+    @include shadow();
+
+    animation: slide-left 1.25s ease-in-out 4s both;
 }
 
 @media screen and (min-width: $desktop) {
@@ -78,7 +92,7 @@ p {
         margin-bottom: 15vh;
     }
 
-    h1{
+    h1 {
         font-size: 3rem;
         line-height: 4rem;
     }
@@ -90,11 +104,13 @@ p {
     }
 
     .bg-sushi-1 {
+        z-index: unset;
         top: 0;
         left: -5vw;
     }
 
     .bg-sushi-2 {
+        z-index: unset;
         top: -7.5vh;
         right: -5vw;
     }
