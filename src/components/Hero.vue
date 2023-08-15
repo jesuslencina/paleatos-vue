@@ -9,12 +9,14 @@
             Todo esto para hacer palitos de sushi desechables y así, satisfacer la actual demanda. En Chile, un local puede llegar usar hasta 20.000 palitos
             mensuales, (equivalente a 5 árboles talados).
         </p>
+        <div class="caret">
+            <span>Scrolleá</span>
+            <img width="50" height="50" class="caret-icon" src="../assets/images/caret-down.webp" alt="Icono de flecha hacia abajo" />
+        </div>
     </main>
 </template>
 
 <style scoped lang="scss">
-$spacing: 8vw;
-
 main {
     display: flex;
     flex-direction: column;
@@ -27,7 +29,7 @@ main {
 
 .logo {
     margin-top: 5vh;
-    margin-bottom: 10vh;
+    margin-bottom: 15vh;
 
     animation: swing-bottom-fwd 1.25s ease-in-out 5s both;
 }
@@ -85,11 +87,29 @@ p {
     animation: slide-left 1.25s ease-in-out 4s both;
 }
 
+.caret {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $accent-green;
+    font-size: 0.9rem;
+    margin-top: 5vh;
+    animation: scale-up-center-fade 1.25s ease-in-out 5s both;
+
+    &-icon {
+        animation: levitate 1s alternate-reverse infinite;
+    }
+}
+
 @media screen and (min-width: $desktop) {
+    main {
+        height: 100vh;
+    }
+
     .logo {
         width: 6rem;
         height: auto;
-        margin-bottom: 15vh;
+        margin-bottom: 5vh;
     }
 
     h1 {
