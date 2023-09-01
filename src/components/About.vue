@@ -1,9 +1,9 @@
 <script>
-import Line from "./misc/Line.vue";
+    import Line from "./misc/Line.vue";
 
-export default {
-    components: { Line },
-};
+    export default {
+        components: { Line },
+    };
 </script>
 
 <template>
@@ -21,33 +21,34 @@ export default {
 </template>
 
 <style scoped lang="scss">
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-img {
-    width: 100%;
-}
-
-.text {
-    margin-left: $spacing;
-    margin-right: $spacing;
-    text-align: center;
-    margin-top: 5vh;
-    margin-bottom: 40vh;
-}
-
-h2 {
-    color: $accent-green;
-}
-
-@media screen and (min-width: $desktop) {
-    .text {
-        margin-left: calc($spacing * 2);
-        margin-right: calc($spacing * 2);
+    section {
+        animation: scale-up-center-fade 1.25s ease-in-out 5s both;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-}
+
+    img {
+        width: 100%;
+    }
+
+    .text {
+        margin-left: $spacing;
+        margin-right: $spacing;
+        text-align: center;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+    }
+
+    h2 {
+        color: $accent-green;
+    }
+
+    @media screen and (min-width: $desktop) and (orientation: landscape) {
+        .text {
+            margin-left: calc($spacing * 2);
+            margin-right: calc($spacing * 2);
+        }
+    }
 </style>
